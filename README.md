@@ -2,12 +2,6 @@
 
 > Tiny `require` library for the browser.  3.0kb minified.  1.2kb gzipped.
 
-## Install
-
-```
-npm install tiny-require
-```
-
 ## Overview
 
 Sometimes you want to use a Node.js module in the browser but can't because of the `require` statements.  The current solution is [browserify](https://github.com/substack/node-browserify).  But it was always pretty hard to grasp, so I put together this.  It's just the bare-bones require code for the browser, allowing you to define what the browser should do when it sees statements like `require('./relativePath')` or `require('underscore')`.
