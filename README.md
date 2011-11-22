@@ -10,7 +10,7 @@ npm install tiny-require
 
 ## Overview
 
-Sometimes you want to use a Node.js module in the browser but can't because of the `require` statements.  The current solution is [browserify](https://github.com/substack/node-browserify).  But it was always pretty hard to wrap my head around, so I put together this.  It's just the require code, and you manually setup the definitions making - there's no magic behind what's happening.
+Sometimes you want to use a Node.js module in the browser but can't because of the `require` statements.  The current solution is [browserify](https://github.com/substack/node-browserify).  But it was always pretty hard to grasp, so I put together this.  It's just the bare-bones require code for the browser, allowing you to define what the browser should do when it sees statements like `require('./relativePath')` or `require('underscore')`.
 
 All you do is create a `require.define` block with the name of the path, and put your module code inside.  This makes it so you can easily convert non-node libraries to ones that you can `require`.  Say Backbone.js was like that, then you could just do this:
 
